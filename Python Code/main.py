@@ -29,7 +29,7 @@ def timer():
     if rep %2 != 0:
         label.config(text="Work", fg=RED, font=(FONT_NAME, 30, "bold"), bg=YELLOW)
 
-        count_down(5)
+        count_down(WORK_sec)
 
     elif rep == 8:
         label.config(text="GOOD WORK", fg=PINK, font=(FONT_NAME, 30, "bold"), bg=YELLOW)
@@ -40,7 +40,7 @@ def timer():
 
         check.config(text=f"{mark}", fg=GREEN, font=(FONT_NAME, 10, "bold"), bg=YELLOW)
 
-        count_down(5)
+        count_down(LONG_BREAK_sec)
 
     elif rep %2 == 0:
         label.config(text="Break", fg=GREEN, font=(FONT_NAME, 30, "bold"), bg=YELLOW)
@@ -51,7 +51,7 @@ def timer():
 
         check.config(text=f"{mark}", fg=GREEN, font=(FONT_NAME, 10, "bold"), bg=YELLOW)
 
-        count_down(5)
+        count_down(SHORT_BREAK_sec)
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
